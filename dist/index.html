@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link href="output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body class=" bg-black bg-cover bg-center min-h-screen font-poppins transition-bg duration-700 ease-in-out"
+  style="background-image: url('images/default-bg.jpg');">
+
+  <!-- Main card -->
+  <div class="w-[90%] max-w-[470px] bg-white/20 backdrop-blur-sm text-white mt-[100px] mx-auto rounded-[20px] p-[40px_35px] text-center shadow-lg">
+
+    <!-- Search Box -->
+    <div class="w-full flex justify-between items-center mb-[30px]">
+      <input type="text" placeholder="Enter city name" id="input" spellcheck="false"
+             class="border-0 outline-none bg-[#ebfffc] text-[#555] py-[10px] px-[25px] h-[60px] rounded-full flex-1 mr-[16px] text-[18px]">
+      <button id="searchBtn"
+              class="border-0 outline-none bg-[#ebfffc] rounded-full w-[60px] h-[60px] cursor-pointer">
+        <img src="images/search.png" alt="search" class="w-[16px] mx-auto">
+    </button>
+    </div>
+
+    <!-- Error message -->
+    <div id="error" class="hidden text-left ml-[10px] text-[15px] mt-[10px]">
+      <p>Invalid city name</p>
+    </div>
+
+    <!-- Weather Display -->
+    <div id="weather" class="hidden">
+      <img src="images/rain.png" alt="weather icon" id="weatherIcon" class="w-[170px] mt-[30px] mx-auto">
+      <h1 class="text-[80px] font-medium" id="temp">22°C</h1>
+      <h2 class="text-[45px] font-normal mt-[-10px]" id="city">New York</h2>
+
+      <!-- Weather Details -->
+      <div class="flex items-center justify-between mt-[50px] px-[20px]">
+        <div class="flex text-left items-center">
+            <!-- Humidity -->
+            <img src="images/humidity.png" alt="humidity" class="w-[40px] mr-[10px] mx-auto">
+            <div>
+            <p class="text-[28px] mt-[-6px]" id="humidity">50%</p>
+            <p>Humidity</p>
+            </div> 
+        </div>
+
+        <div class="flex text-left items-center">
+                <!-- Wind -->
+            <img src="images/wind.png" alt="wind" class="w-[40px] mr-[10px] mx-auto">
+            <div>
+            <p class="text-[28px] mt-[-6px]" id="wind">15 km/h</p>
+            <p >Wind</p>
+            </div>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script> 
+</body>
+</html>
